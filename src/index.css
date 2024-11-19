@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  :root {
+    --grasso-red: #C41E3A;
+    --grasso-orange: #FF8C00;
+  }
+
+  body {
+    font-family: 'Roboto', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-grasso-red hover:bg-red-800 text-white font-bold py-2 px-4 rounded;
+  }
+}
+
+@layer utilities {
+  .grasso-link {
+    @apply font-medium text-grasso-orange hover:text-grasso-red;
+  }
+}
